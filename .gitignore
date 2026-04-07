@@ -1,0 +1,4 @@
+venv/
+*.html
+
+bd_em_csv.csv
