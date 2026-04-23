@@ -1,4 +1,9 @@
 venv/
 *.html
-
+__pycache__/
+*.py[cod]
+.env
+*.csv
+*.bd
+repository/sqlite_saver.py
 bd_em_csv.csv

@@ -1,5 +1,5 @@
 URLS = {
-    "golgg": "https://gol.gg/tournament/list/"
+    "golgg": "https://gol.gg/"
 }
 
 HEADERS_PADRAO = {
