@@ -111,9 +111,12 @@ class GolggExtractor(BaseExtractor):
                 soup_game = BeautifulSoup(game_resp.text, 'html.parser')
                 game['time'] = soup_game.find('div', class_='col-6 text-center').find('h1').text
                 
+                
                 team1_cond = soup_game.find('div', class_= "col-12 blue-line-header").text
                 team2_cond = soup_game.find('div', class_= "col-12 red-line-header").text
-
+                
+                game['t1'] = team1_cond.split('-')[0]
+                game['t2'] = team2_cond.split('-')[0]
                 if 'win' in team1_cond.split('-')[1].lower():
                     game['winner'] = team1_cond.split('-')[0]
                 else:
@@ -182,6 +185,6 @@ class GolggExtractor(BaseExtractor):
             i += 1
         
         print(data)
-        pd.DataFrame(data).to_csv("saving.csv")
+        pd.DataFrame(data).to_csv("games_lol.csv")
         
 
