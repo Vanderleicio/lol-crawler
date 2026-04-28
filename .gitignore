@@ -5,5 +5,4 @@ __pycache__/
 .env
 *.csv
 *.bd
-repository/sqlite_saver.py
 bd_em_csv.csv
